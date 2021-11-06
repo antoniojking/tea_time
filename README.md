@@ -87,17 +87,17 @@ The Tea Time API is a RESTful API for a tea subscription service. You may hit th
 
 2. Install dependencies
    ```
-   $
+   $bundle install
    ```
 
 3. Create the database
    ```
-   $
+   $rails db:create
    ```
 
 4. Migrate database tables
    ```
-   $
+   $rails db:migrate
    ```
 
 8. Run server
@@ -109,12 +109,12 @@ The Tea Time API is a RESTful API for a tea subscription service. You may hit th
 
 - To run the test suite:
   ```
-  $
+  $bundle exec rspec
   ```
 
 - To assess test coverage:
   ```
-  $
+  $open coverage/index.html
   ```
 
 ## Getting Started
