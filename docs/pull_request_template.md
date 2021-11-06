@@ -5,8 +5,8 @@
 - None
 
 **Testing**:
-- [] Code has been tested
-- [] test coverage is >90%
+- [ ] Code has been tested
+- [ ] test coverage is >90%
 
 **Notes**:
-- Issues Resolved: 
+- Issues Resolved:
