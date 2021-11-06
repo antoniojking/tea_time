@@ -1,12 +1,12 @@
-What Was Done:
+**What Was Done**:
 - Something
 
-Roadblocks:
+**Roadblocks**:
 - None
 
-Testing:
+**Testing**:
 - [] Code has been tested
 - [] test coverage is >90%
 
-Notes:
-- None
+**Notes**:
+- Issues Resolved: 
