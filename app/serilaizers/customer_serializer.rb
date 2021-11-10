@@ -9,7 +9,12 @@ class CustomerSerializer
             id: customer.id,
             type: 'customer',
             attributes: {
-              subscriptions: []
+              subscriptions: customer.subscriptions.map do |subscription|
+                              {
+                                title: subscription.package.title,
+                                status: subscription.status
+                              }
+                             end
             }
           }
         end
