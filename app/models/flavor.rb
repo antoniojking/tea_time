@@ -1,4 +1,4 @@
 class Flavor < ApplicationRecord
-  belongs_to :subscription
+  belongs_to :package
   belongs_to :tea
 end
