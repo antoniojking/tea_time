@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_06_221743) do
+ActiveRecord::Schema.define(version: 2021_11_10_153922) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,11 +26,15 @@ ActiveRecord::Schema.define(version: 2021_11_06_221743) do
 
   create_table "flavors", force: :cascade do |t|
     t.bigint "tea_id"
-    t.bigint "subscription_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["subscription_id"], name: "index_flavors_on_subscription_id"
+    t.bigint "package_id"
+    t.index ["package_id"], name: "index_flavors_on_package_id"
     t.index ["tea_id"], name: "index_flavors_on_tea_id"
+  end
+
+  create_table "packages", force: :cascade do |t|
+    t.string "title"
   end
 
   create_table "plans", force: :cascade do |t|
@@ -43,12 +47,15 @@ ActiveRecord::Schema.define(version: 2021_11_06_221743) do
   end
 
   create_table "subscriptions", force: :cascade do |t|
-    t.string "title"
     t.integer "price"
     t.integer "status"
     t.integer "frequency"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "package_id"
+    t.bigint "customer_id"
+    t.index ["customer_id"], name: "index_subscriptions_on_customer_id"
+    t.index ["package_id"], name: "index_subscriptions_on_package_id"
   end
 
   create_table "teas", force: :cascade do |t|
@@ -60,8 +67,10 @@ ActiveRecord::Schema.define(version: 2021_11_06_221743) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "flavors", "subscriptions"
+  add_foreign_key "flavors", "packages"
   add_foreign_key "flavors", "teas"
   add_foreign_key "plans", "customers"
   add_foreign_key "plans", "subscriptions"
+  add_foreign_key "subscriptions", "customers"
+  add_foreign_key "subscriptions", "packages"
 end
