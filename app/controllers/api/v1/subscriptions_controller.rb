@@ -8,7 +8,7 @@ class Api::V1::SubscriptionsController < ApplicationController
     else
       customer.subscriptions.create(package: package, price: params[:price], status: 1, frequency: params[:frequency])
 
-      render(json: CustomerSerializer.format_customer(customer), status: :created)
+      render(json: CustomerSerializer.format_customer(customer), status: 201)
     end
   end
 end
