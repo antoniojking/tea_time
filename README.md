@@ -138,8 +138,12 @@ GET       | /customers/:id        | Get a customer's subscriptions             |
 POST      | /subscriptions/       | Subscribe to a new tea subscription        | [doc](./docs/subscriptions_endpoint.md)
 PATCH     | /subscriptions/:id/   | Cancel a customer's tea subscription       | [doc](./docs/subscriptions_endpoint.md)
 
+## Planning
+[Tea Time Google Sheet](https://docs.google.com/spreadsheets/d/1vUl4_0eJ-a11aXsyJYsmh06lSlbLxu769ldp2N0KX8I/edit?usp=sharing)
+
 ## Database Schema
 ![Tea Time Database Schema](/docs/images/tea_time_db_schema.png)
+
 
 ## Contributors
 
