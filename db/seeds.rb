@@ -30,20 +30,20 @@ tea8 = Tea.create(title: 'Chai', description: 'a modern twist on the classic, co
 tea9 = Tea.create(title: 'Yerba Mate', description: 'a healthy and stimulating drink, rich and robust with earthy undertones and a smooth finish', temperature: 180, brew_time: '3 to 5')
 tea10 = Tea.create(title: 'Green', description: 'premium green tea', temperature: 180, brew_time: '3')
 
-#Subscriptions
-customer1.subscriptions.create(package_id: 1, price: 2200, status: 1, frequency: 3)
-customer1.subscriptions.create(package_id: 2, price: 2100, status: 1, frequency: 3)
-customer1.subscriptions.create(package_id: 3, price: 2300, status: 2, frequency: 0)
-customer1.subscriptions.create(package_id: 4, price: 2500, status: 1, frequency: 3)
-customer2.subscriptions.create(package_id: 1, price: 2200, status: 2, frequency: 0)
-customer3.subscriptions.create(package_id: 2, price: 2100, status: 1, frequency: 1)
-customer4.subscriptions.create(package_id: 4, price: 2500, status: 1, frequency: 2)
-
 #Packages
 package1 = Package.create(title: 'Herbal')
 package2 = Package.create(title: 'Black')
 package3 = Package.create(title: 'Variety 1')
 package4 = Package.create(title: 'Variety 2')
+
+#Subscriptions
+customer1.subscriptions.create(package: package1, price: 2200, status: 0, frequency: 3)
+customer1.subscriptions.create(package: package2, price: 2100, status: 0, frequency: 3)
+customer1.subscriptions.create(package: package3, price: 2300, status: 1, frequency: 0)
+customer1.subscriptions.create(package: package4, price: 2500, status: 0, frequency: 3)
+customer2.subscriptions.create(package: package1, price: 2200, status: 1, frequency: 0)
+customer3.subscriptions.create(package: package2, price: 2100, status: 0, frequency: 1)
+customer4.subscriptions.create(package: package4, price: 2500, status: 0, frequency: 2)
 
 #Flavors
 Flavor.create(package: package1, tea: tea4)
