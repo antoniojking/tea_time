@@ -122,7 +122,7 @@ The Tea Time API is a RESTful API for a tea subscription service. You may hit th
 The `base path` of each endpoint is:
 
 ```
-https://localhost:3000/
+http://localhost:3000/
 ```
 
 - For `GET` requests, you can simply send the endpoint requests through your internet browser.  
