@@ -2,9 +2,9 @@ class CustomerSerializer
   def self.format_customer(customer)
     {
       data:
-        if customer.nil?
-          {}
-        else
+        # if customer.nil?
+        #   {}
+        # else
           {
             id: customer.id,
             type: 'customer',
@@ -17,7 +17,7 @@ class CustomerSerializer
                              end
             }
           }
-        end
+        # end
     }
   end
 end
