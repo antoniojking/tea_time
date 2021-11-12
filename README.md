@@ -22,6 +22,7 @@
   <a href="#testing">Testing</a> •
   <a href="#getting-started">Getting Started</a> •
   <a href="#endpoints">Endpoints</a> •
+  <a href="#planning">Planning</a> •
   <a href="#database-schema">Database Schema</a> •
   <a href="#contributors">Contributors</a> •
   <a href="#acknowledgements">Acknowledgements</a>
