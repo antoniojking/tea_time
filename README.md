@@ -70,13 +70,13 @@ The Tea Time API is a RESTful API for a tea subscription service. You may hit th
 
 <div align="center">
 
-| Development | Testing       | Dependencies          |
-|:-----------:|:-------------:|:---------------------:|
-|             |               |                       |
-|             |               |                       |
-|             |               |                       |
-|             |               |                       |
-|             |               |                       |
+| Development  | Testing          | Dependencies          |
+|:------------:|:----------------:|:---------------------:|
+| Ruby 2.7.2   | Simplecov        | Pry                   |
+| Rails 5.2.5  | RSpec            | Faraday               |
+| PostgreSQL   | Shoulda-matchers |                       |
+| Atom         |                  |                       |
+| GitHub       |                  |                       |
 
 </div>
 
@@ -122,7 +122,7 @@ The Tea Time API is a RESTful API for a tea subscription service. You may hit th
 The `base path` of each endpoint is:
 
 ```
-https://localhost:3000/
+http://localhost:3000/
 ```
 
 - For `GET` requests, you can simply send the endpoint requests through your internet browser.  
@@ -134,12 +134,12 @@ The following table presents each API endpoint and its documentation.
 
 HTTP Verb | Endpoint              | Description                                | Docs
 ----------|-----------------------|--------------------------------------------|------
-GET       | /customers/:id        | Get all customer subscriptions             | [doc](./docs/customers_endpoint.md)
+GET       | /customers/:id        | Get a customer's subscriptions             | [doc](./docs/customers_endpoint.md)
 POST      | /subscriptions/       | Subscribe to a new tea subscription        | [doc](./docs/subscriptions_endpoint.md)
 PATCH     | /subscriptions/:id/   | Cancel a customer's tea subscription       | [doc](./docs/subscriptions_endpoint.md)
 
 ## Database Schema
-![Tea Time Database Schema](/storage/images/schema.png)
+![Tea Time Database Schema](/docs/images/tea_time_db_schema.png)
 
 ## Contributors
 
